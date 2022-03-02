@@ -7,7 +7,6 @@ namespace CustomExceptionHandlerTester
     {
         static void Main(string[] args)
         {
-            ExceptionHandler handler = new ExceptionHandler();
             try
             {
                 try
@@ -18,14 +17,14 @@ namespace CustomExceptionHandlerTester
                 catch (Exception ex)
                 {
 
-                    string message = handler.ExceptionEngine(ex, "Program", "Some Inner Method", "A program to test custom exception handler");
+                    string message = ExceptionHandler.ExceptionEngine(ex, "Program", "Some Inner Method", "A program to test custom exception handler");
                 }
                 int a = 10;
                 int b = a / 0;
             }
             catch (Exception ex)
             {
-                string message = handler.ExceptionEngine(ex, "Program", "Main", "A program to test custom exception handler");
+                string message = ExceptionHandler.ExceptionEngine(ex, "Program", "Main", "A program to test custom exception handler");
             }
         }
     }
